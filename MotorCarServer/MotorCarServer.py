@@ -45,8 +45,8 @@ if __name__ == '__main__':
     # cameraServer = CameraServer(getCameraServerConfig(), logging)
     # cameraServer.run()
     # 模拟APP客户端获取照片
-    # config={'IP': '127.0.0.1', 'Port': 10001}
-    # CameraClient(config,logging)
+    # config = {'IP': '127.0.0.1', 'Port': 10001}
+    # CameraClient(config, logging)
 
     while True:
         sleep(1)

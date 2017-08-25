@@ -14,6 +14,7 @@ class MotorCarServer:
         # 数据包的长度
         self.MESSAGE_LEN = 256
         self.tag = "MotorCar Server"
+        self.messageProcess = MessageProcess(logging)
 
     def run(self):
         self.serverThread = threading.Thread(target=self.__runServer)
@@ -44,14 +45,14 @@ class MotorCarServer:
                 if (len(ReBuffer) >= self.MESSAGE_LEN):
                     buffer = ReBuffer[0:self.MESSAGE_LEN]
                     ReString = str(buffer, encoding="utf-8")
-                    self.logging.info(self.tag + ": Request Message!\n"+ReString)
+                    self.logging.info(self.tag + ": Request Message!\n" + ReString)
                     # Message Processing
-                    StString = MessageProcess.porcess(ReString)
+                    StString = self.messageProcess.porcess(ReString)
                     # Message Processing
                     StString = StString.ljust(self.MESSAGE_LEN, ' ')
                     buffer = bytes(StString, encoding="utf-8")
                     clientConnection.send(buffer)
-                    self.logging.info(self.tag + ": Response Message!\n"+StString)
+                    self.logging.info(self.tag + ": Response Message!\n" + StString)
                     ReBuffer = ReBuffer[self.MESSAGE_LEN:]
                 else:
                     recvBuffer = clientConnection.recv(1024)

@@ -1,0 +1,10 @@
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:37] INFO MotorCar Server: Please Using Python3!
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:38] INFO MotorCar Server: MotorCar Server Running!
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:24] INFO MotorCar Server: Socket Server Running!
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:39] INFO MotorCar Server: New Client Connection:('127.0.0.1', 8567)!
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:47] INFO MotorCar Server: Request Message!
+{"MESSAGE_ID":11111,"CAR_CONTROL":{"ANGLE":180,"RANGE":0.85},"HANDS_CONTROL":[-0.9,0,0,0]}                                                                                                                                                                      
+Fri, 25 Aug 2017 17:27:32 MotorCarClient.py[line:22] INFO MotorCar Client: New Message!
+{"MESSAGE_ID": 11111, "STATUS": 0}                                                                                                                                                                                                                              
+Fri, 25 Aug 2017 17:27:32 MotorCarServer.py[line:54] INFO MotorCar Server: Response Message!
+{"MESSAGE_ID": 11111, "STATUS": 0}                                                                                                                                                                                                                              

@@ -58,7 +58,7 @@ class MotorCarServer:
                     recvBuffer = clientConnection.recv(1024)
                     ReBuffer[len(ReBuffer):] = recvBuffer
         except socket.error as msg:
-            self.logging.waring(self.tag + ": Closed Client Connection:%s!", str(client["Address"]))
+            self.logging.warning(self.tag + ": Closed Client Connection:%s!", str(client["Address"]))
         finally:
             clientConnection.close()
             self.clientInfo.remove(client)

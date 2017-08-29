@@ -38,15 +38,15 @@ if __name__ == '__main__':
     logging.info("MotorCar Server: MotorCar Server Running!")
     motorCarServer = MotorCarServer(getMotorServerConfig(), logging)
     motorCarServer.run()
-    config = {'IP': '127.0.0.1', 'Port': 10000}
-    MotorCarClient(config, logging)
+    # config = {'IP': '127.0.0.1', 'Port': 10000}
+    # MotorCarClient(config, logging)
 
-    # logging.info("Camera Server: MotorCar Server Running!")
-    # cameraServer = CameraServer(getCameraServerConfig(), logging)
-    # cameraServer.run()
+    logging.info("Camera Server: MotorCar Server Running!")
+    cameraServer = CameraServer(getCameraServerConfig(), logging)
+    cameraServer.run()
     # 模拟APP客户端获取照片
     # config = {'IP': '127.0.0.1', 'Port': 10001}
     # CameraClient(config, logging)
 
-    while True:
-        sleep(1)
+while True:
+    sleep(1)

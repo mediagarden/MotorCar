@@ -37,6 +37,8 @@ class MessageProcess:
         self.headControl.run()
 
     def porcess(self, requestMsg):
+        self.logging.info(self.tag + ": Process The Message!")
+        self.logging.info(requestMsg)
         requestMsg = requestMsg.strip()
         requestMsg = json.loads(requestMsg)
         self.logging.info(self.tag + ": Process The Message!")

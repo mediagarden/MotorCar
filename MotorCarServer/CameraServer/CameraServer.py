@@ -60,7 +60,7 @@ class CameraServer:
             self.logging.info(self.tag + ": Begin to Send Data of Photo!")
             sentLen = 0
             while sentLen < lenPic:
-                sendLen = clientConnection.send(picBuffer[sentLen:sentLen + 4*1024])
+                sendLen = clientConnection.send(picBuffer[sentLen:sentLen+256*1024])
                 sentLen += sendLen
                 self.logging.info(self.tag + ": Send Data Size: %s/%s!", sendLen, sentLen)
             self.logging.info(self.tag + ": The Photo was Sent!")
